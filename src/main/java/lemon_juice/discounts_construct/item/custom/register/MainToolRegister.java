@@ -12,7 +12,7 @@ import net.minecraft.world.item.Tiers;
 import java.util.ArrayList;
 
 public class MainToolRegister {
-    public static Tier[] TIERS = {Tiers.DIAMOND, Tiers.GOLD, Tiers.IRON, Tiers.NETHERITE, Tiers.STONE, Tiers.WOOD};
+    public static Tier[] TIERS = {Tiers.NETHERITE, Tiers.DIAMOND, Tiers.IRON, Tiers.STONE, Tiers.GOLD, Tiers.WOOD};
     public static ArrayList<TierPair> ALL_TIER_PAIRS = new ArrayList<>();
     public static ArrayList<TierTriplet> ALL_TIER_TRIPLETS = new ArrayList<>();
 
@@ -27,6 +27,7 @@ public class MainToolRegister {
         }
     }
 
+    // Isn't 100% Perfect Doesn't Recognize tier1-tier1-tier2 = tier2-tier1-tier1
     public static void generateAllTierTriplets(){
         for (int i = 0; i < TIERS.length; i++) {
             for (int j = 0; j < TIERS.length; j++) {
