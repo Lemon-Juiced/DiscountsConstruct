@@ -14,6 +14,22 @@
   "item.discounts_construct.netherite_stone_sword": "Netherite-Stone Sword",
   "item.discounts_construct.netherite_wood_sword": "Netherite-Wood Sword",
   "item.discounts_construct.stone_wood_sword": "Stone-Wood Sword",
+
+  "item.discounts_construct.diamond_gold_hoe": "Diamond-Gold Hoe",
+  "item.discounts_construct.diamond_iron_hoe": "Diamond-Iron Hoe",
+  "item.discounts_construct.diamond_netherite_hoe": "Diamond-Netherite Hoe",
+  "item.discounts_construct.diamond_stone_hoe": "Diamond-Stone Hoe",
+  "item.discounts_construct.diamond_wood_hoe": "Diamond-Wood Hoe",
+  "item.discounts_construct.gold_iron_hoe": "Gold-Iron Hoe",
+  "item.discounts_construct.gold_netherite_hoe": "Gold-Netherite Hoe",
+  "item.discounts_construct.gold_stone_hoe": "Gold-Stone Hoe",
+  "item.discounts_construct.gold_wood_hoe": "Gold-Wood Hoe",
+  "item.discounts_construct.iron_netherite_hoe": "Iron-Netherite Hoe",
+  "item.discounts_construct.iron_stone_hoe": "Iron-Stone Hoe",
+  "item.discounts_construct.iron_wood_hoe": "Iron-Wood Hoe",
+  "item.discounts_construct.netherite_stone_hoe": "Netherite-Stone Hoe",
+  "item.discounts_construct.netherite_wood_hoe": "Netherite-Wood Hoe",
+  "item.discounts_construct.stone_wood_hoe": "Stone-Wood Hoe",
   
   "itemGroup.discounts_construct": "Discounts Construct"
 }

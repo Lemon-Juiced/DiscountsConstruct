@@ -2,12 +2,15 @@ package lemon_juice.discounts_construct.creativetab;
 
 import lemon_juice.discounts_construct.DiscountsConstruct;
 import lemon_juice.discounts_construct.item.ModItems;
+import lemon_juice.discounts_construct.item.custom.tools.ModAxeItem;
+import lemon_juice.discounts_construct.item.custom.tools.ModHoeItem;
+import lemon_juice.discounts_construct.item.custom.tools.ModPickaxeItem;
+import lemon_juice.discounts_construct.item.custom.tools.ModSwordItem;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.SwordItem;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -25,7 +28,10 @@ public class ModCreativeTab {
 
     public static void registerTabs(BuildCreativeModeTabContentsEvent event) {
         if (event.getTab() == DISCOUNTS_CONSTRUCT_TAB.get()) {
-            for (RegistryObject<Item> item: ModItems.ITEMS.getEntries()) if(item.get() instanceof SwordItem) event.accept(item.get());
+            for (RegistryObject<Item> item: ModItems.ITEMS.getEntries()) if(item.get() instanceof ModSwordItem) event.accept(item.get());
+            for (RegistryObject<Item> item: ModItems.ITEMS.getEntries()) if(item.get() instanceof ModPickaxeItem) event.accept(item.get());
+            for (RegistryObject<Item> item: ModItems.ITEMS.getEntries()) if(item.get() instanceof ModAxeItem) event.accept(item.get());
+            for (RegistryObject<Item> item: ModItems.ITEMS.getEntries()) if(item.get() instanceof ModHoeItem) event.accept(item.get());
         }
     }
 

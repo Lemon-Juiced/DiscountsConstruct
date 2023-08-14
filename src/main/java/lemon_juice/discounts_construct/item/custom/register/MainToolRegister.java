@@ -1,5 +1,7 @@
 package lemon_juice.discounts_construct.item.custom.register;
 
+import lemon_juice.discounts_construct.item.custom.register.tools.HoeRegister;
+import lemon_juice.discounts_construct.item.custom.register.tools.SwordRegister;
 import lemon_juice.discounts_construct.item.custom.register.util.TierPair;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.Tiers;
@@ -27,6 +29,7 @@ public class MainToolRegister {
 
         // Swords and Hoes
         SwordRegister.registerAllSwords();
+        HoeRegister.registerAllHoes();
 
         //Generate all TierTriplets
 

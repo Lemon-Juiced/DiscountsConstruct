@@ -1,6 +1,7 @@
-package lemon_juice.discounts_construct.item.custom.register;
+package lemon_juice.discounts_construct.item.custom.register.tools;
 
 import lemon_juice.discounts_construct.item.ModItems;
+import lemon_juice.discounts_construct.item.custom.register.MainToolRegister;
 import lemon_juice.discounts_construct.item.custom.tools.ModSwordItem;
 import lemon_juice.discounts_construct.item.custom.register.util.TierPair;
 import net.minecraft.world.item.Item;
