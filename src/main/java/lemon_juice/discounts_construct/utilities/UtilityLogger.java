@@ -14,12 +14,10 @@ public class UtilityLogger {
         ArrayList<String> buffer = new ArrayList<>();
 
         for (RegistryObject<Item> item: ModItems.ITEMS.getEntries()) {
-            if(item.get() instanceof ModSwordItem){
                 String itemID = String.valueOf(item.getId());
                 String itemName = itemID.substring(itemID.indexOf(':')+1);
 
-                buffer.add("\"item.discounts_construct." + itemName + "\": \"" + " Sword\"");
-            }
+                buffer.add("\"item.discounts_construct." + itemName + "\": \"" + "\"");
         }
 
         for (int i = 0; i < buffer.size(); i++) {
