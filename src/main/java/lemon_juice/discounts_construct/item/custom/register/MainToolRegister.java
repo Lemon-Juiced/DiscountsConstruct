@@ -101,111 +101,17 @@ public class MainToolRegister {
         }
 
         // Case 2: Two Different Tiers (But Only In Form tier1_tier1_tier2)
-
-
-
-
-
-
-
-        /*
         for (int i = 0; i < TIERS.length; i++) {
             for (int j = 0; j < TIERS.length; j++) {
-                for (int k = 0; k < TIERS.length; k++) {
-                    // If all three aren't the same
-                    if(!(TIERS[i] == TIERS[j] && TIERS[i] == TIERS[k])){
-                        // At this point: i could equal j, i could equal k, j could equal k (but not all at once)
+                // In this case we want to be sure it is in the form tier1_tier1_tier2
+                // So 'i' is "tier1_tier1" and j is "tier2"
 
-                        // Easiest case (3 different tiers)
-                        if(TIERS[i] != TIERS[j] && TIERS[i] != TIERS[k] && TIERS[j] != TIERS[k]){
-                            // Ensure this isn't a duplicate of a previously listed entry
-                            // searchTripletsForDuplicates returns true if it is a duplicate
-                            if(!searchTripletsForDuplicates(TIERS[i], TIERS[j], TIERS[k]))
-                                ALL_TIER_TRIPLETS.add(new TierTriplet(TIERS[i], TIERS[j], TIERS[k]));
-                        }
-
-                        // Cases where only 2 different tiers are involved
-                        // Order 1: tier1-tier1-tier2
-                        if(TIERS[i] == TIERS[j] && TIERS[i] != TIERS[k]){
-                            // Ensure this isn't a duplicate of a previously listed entry
-                            // searchTripletsForDuplicates returns true if it is a duplicate
-                            if(!searchTripletsForDuplicates(TIERS[i], TIERS[j], TIERS[k]))
-                                ALL_TIER_TRIPLETS.add(new TierTriplet(TIERS[i], TIERS[j], TIERS[k]));
-                        }
-                        // Order 2: tier1-tier2-tier1 - Skip
-                        // Order 3: tier2-tier1-tier1 - Skip
-                    }
-
-                    /*
-                    // Isn't 100% Perfect Doesn't Recognize tier1-tier1-tier2 = tier2-tier1-tier1
-                    // The second case below misses tier1-tier1-tier2 cases (this accounts for them)
-                    // If the first two are the same, just loop on the final one
-                    if(TIERS[i] == TIERS[j] && TIERS[i] != TIERS[k]){
-                        ALL_TIER_TRIPLETS.add(new TierTriplet(TIERS[i], TIERS[j], TIERS[k]));
-                    }
-
-                    // If the tier isn't 3 of the same
-                    if(TIERS[i] != TIERS[j] && TIERS[i] != TIERS[k]){
-
-                        //This is almost correct (its misses the tier1-tier1-tier2 cases)
-                        // If another permutation of this tier doesn't already exist
-                        if(!(k <= i) && !(j <= i)){
-                            if(j != k) //Filters out tier2-tier2-tier1
-                                ALL_TIER_TRIPLETS.add(new TierTriplet(TIERS[i], TIERS[j], TIERS[k]));
-                        }
-                    }
+                // If the tier isn't the same and another permutation of this tier doesn't already exist
+                if (TIERS[i] != TIERS[j] && !(j <= i)) {
+                    ALL_TIER_TRIPLETS.add(new TierTriplet(TIERS[i], TIERS[i], TIERS[j]));
                 }
             }
         }
-        */
-    }
-
-    /**
-     * Determines if 3 tiers are already in the ALL_TIER_TRIPLETS ArrayList
-     *
-     * @param tier1 The first tier
-     * @param tier2 The second tier
-     * @param tier3 The third tier
-     * @return true if there is a duplicate, false otherwise
-     */
-    public static boolean searchTripletsForDuplicates(Tier tier1, Tier tier2, Tier tier3){
-        // First organize the tiers into the form they would have in the ALL_TIER_TRIPLETS ArrayList
-        ArrayList<Tier> organizedTierList = new ArrayList<>();
-
-        // Add the tiers to the list in order
-        if(getTierName(tier1).equals("netherite")) organizedTierList.add(Tiers.NETHERITE);
-        if(getTierName(tier2).equals("netherite")) organizedTierList.add(Tiers.NETHERITE);
-        if(getTierName(tier3).equals("netherite")) organizedTierList.add(Tiers.NETHERITE);
-
-        if(getTierName(tier1).equals("diamond")) organizedTierList.add(Tiers.DIAMOND);
-        if(getTierName(tier2).equals("diamond")) organizedTierList.add(Tiers.DIAMOND);
-        if(getTierName(tier3).equals("diamond")) organizedTierList.add(Tiers.DIAMOND);
-
-        if(getTierName(tier1).equals("iron")) organizedTierList.add(Tiers.IRON);
-        if(getTierName(tier2).equals("iron")) organizedTierList.add(Tiers.IRON);
-        if(getTierName(tier3).equals("iron")) organizedTierList.add(Tiers.IRON);
-
-        if(getTierName(tier1).equals("stone")) organizedTierList.add(Tiers.STONE);
-        if(getTierName(tier2).equals("stone")) organizedTierList.add(Tiers.STONE);
-        if(getTierName(tier3).equals("stone")) organizedTierList.add(Tiers.STONE);
-
-        if(getTierName(tier1).equals("gold")) organizedTierList.add(Tiers.GOLD);
-        if(getTierName(tier2).equals("gold")) organizedTierList.add(Tiers.GOLD);
-        if(getTierName(tier3).equals("gold")) organizedTierList.add(Tiers.GOLD);
-
-        if(getTierName(tier1).equals("wood")) organizedTierList.add(Tiers.WOOD);
-        if(getTierName(tier2).equals("wood")) organizedTierList.add(Tiers.WOOD);
-        if(getTierName(tier3).equals("wood")) organizedTierList.add(Tiers.WOOD);
-
-        // Turns the organizedTierList into the tierTriplet itself
-        TierTriplet tierTriplet = new TierTriplet(organizedTierList.get(0), organizedTierList.get(1), organizedTierList.get(2));
-
-        // Returns true if it is a duplicate, false otherwise
-        for (int i = 0; i < ALL_TIER_TRIPLETS.size(); i++) {
-            if(tierTriplet == ALL_TIER_TRIPLETS.get(i)) return true;
-        }
-
-        return false;
     }
 
     public static String getTierName(Tier tier){
