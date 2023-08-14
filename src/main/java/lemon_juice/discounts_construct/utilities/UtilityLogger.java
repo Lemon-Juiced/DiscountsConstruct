@@ -2,7 +2,6 @@ package lemon_juice.discounts_construct.utilities;
 
 import lemon_juice.discounts_construct.DiscountsConstruct;
 import lemon_juice.discounts_construct.item.ModItems;
-import lemon_juice.discounts_construct.item.custom.tools.ModSwordItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.RegistryObject;
 

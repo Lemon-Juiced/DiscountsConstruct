@@ -11,6 +11,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -29,8 +30,11 @@ public class ModCreativeTab {
     public static void registerTabs(BuildCreativeModeTabContentsEvent event) {
         if (event.getTab() == DISCOUNTS_CONSTRUCT_TAB.get()) {
             for (RegistryObject<Item> item: ModItems.ITEMS.getEntries()) if(item.get() instanceof ModSwordItem) event.accept(item.get());
+            //event.accept(Items.AIR); // This is temporary
             for (RegistryObject<Item> item: ModItems.ITEMS.getEntries()) if(item.get() instanceof ModPickaxeItem) event.accept(item.get());
+            //event.accept(Items.AIR); // This is temporary
             for (RegistryObject<Item> item: ModItems.ITEMS.getEntries()) if(item.get() instanceof ModAxeItem) event.accept(item.get());
+            //event.accept(Items.AIR); // This is temporary
             for (RegistryObject<Item> item: ModItems.ITEMS.getEntries()) if(item.get() instanceof ModHoeItem) event.accept(item.get());
         }
     }
