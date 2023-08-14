@@ -1,3 +1,19 @@
 {
+  "item.discounts_construct.diamond_gold_sword": "Diamond-Gold Sword",
+  "item.discounts_construct.diamond_iron_sword": "Diamond-Iron Sword",
+  "item.discounts_construct.diamond_netherite_sword": "Diamond-Netherite Sword",
+  "item.discounts_construct.diamond_stone_sword": "Diamond-Stone Sword",
+  "item.discounts_construct.diamond_wood_sword": "Diamond-Wood Sword",
+  "item.discounts_construct.gold_iron_sword": "Gold-Iron Sword",
+  "item.discounts_construct.gold_netherite_sword": "Gold-Netherite Sword",
+  "item.discounts_construct.gold_stone_sword": "Gold-Stone Sword",
+  "item.discounts_construct.gold_wood_sword": "Gold-Wood Sword",
+  "item.discounts_construct.iron_netherite_sword": "Iron-Netherite Sword",
+  "item.discounts_construct.iron_stone_sword": "Iron-Stone Sword",
+  "item.discounts_construct.iron_wood_sword": "Iron-Wood Sword",
+  "item.discounts_construct.netherite_stone_sword": "Netherite-Stone Sword",
+  "item.discounts_construct.netherite_wood_sword": "Netherite-Wood Sword",
+  "item.discounts_construct.stone_wood_sword": "Stone-Wood Sword",
+  
   "itemGroup.discounts_construct": "Discounts Construct"
 }
