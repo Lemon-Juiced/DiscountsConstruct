@@ -1,7 +1,7 @@
 package lemon_juice.discounts_construct;
 
 import com.mojang.logging.LogUtils;
-import lemon_juice.discounts_construct.creativetab.ModCreativeTab;
+import lemon_juice.discounts_construct.creativetab.ModCreativeTabs;
 import lemon_juice.discounts_construct.item.ModItems;
 import lemon_juice.discounts_construct.utilities.UtilityLogger;
 import net.minecraftforge.api.distmarker.Dist;
@@ -30,8 +30,8 @@ public class DiscountsConstruct {
         UtilityLogger.outputItems();
 
         // Register Creative Tab
-        ModCreativeTab.register(modEventBus);
-        modEventBus.addListener(ModCreativeTab::registerTabs);
+        ModCreativeTabs.register(modEventBus);
+        modEventBus.addListener(ModCreativeTabs::registerTabs);
 
         modEventBus.addListener(this::commonSetup);
 

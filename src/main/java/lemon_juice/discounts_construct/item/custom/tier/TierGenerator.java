@@ -1,4 +1,4 @@
-package lemon_juice.discounts_construct.item.custom.util;
+package lemon_juice.discounts_construct.item.custom.tier;
 
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;

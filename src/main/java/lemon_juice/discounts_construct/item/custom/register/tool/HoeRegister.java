@@ -1,9 +1,9 @@
-package lemon_juice.discounts_construct.item.custom.register.tools;
+package lemon_juice.discounts_construct.item.custom.register.tool;
 
 import lemon_juice.discounts_construct.item.ModItems;
 import lemon_juice.discounts_construct.item.custom.register.MainToolRegister;
 import lemon_juice.discounts_construct.item.custom.register.util.TierPair;
-import lemon_juice.discounts_construct.item.custom.tools.ModHoeItem;
+import lemon_juice.discounts_construct.item.custom.tool.ModHoeItem;
 import net.minecraft.world.item.Item;
 
 public class HoeRegister {

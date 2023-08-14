@@ -1,6 +1,6 @@
-package lemon_juice.discounts_construct.item.custom.tools;
+package lemon_juice.discounts_construct.item.custom.tool;
 
-import lemon_juice.discounts_construct.item.custom.util.TierGenerator;
+import lemon_juice.discounts_construct.item.custom.tier.TierGenerator;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.Tier;
 

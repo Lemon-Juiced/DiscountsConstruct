@@ -1,9 +1,9 @@
 package lemon_juice.discounts_construct.item.custom.register;
 
-import lemon_juice.discounts_construct.item.custom.register.tools.AxeRegister;
-import lemon_juice.discounts_construct.item.custom.register.tools.HoeRegister;
-import lemon_juice.discounts_construct.item.custom.register.tools.PickaxeRegister;
-import lemon_juice.discounts_construct.item.custom.register.tools.SwordRegister;
+import lemon_juice.discounts_construct.item.custom.register.tool.AxeRegister;
+import lemon_juice.discounts_construct.item.custom.register.tool.HoeRegister;
+import lemon_juice.discounts_construct.item.custom.register.tool.PickaxeRegister;
+import lemon_juice.discounts_construct.item.custom.register.tool.SwordRegister;
 import lemon_juice.discounts_construct.item.custom.register.util.TierPair;
 import lemon_juice.discounts_construct.item.custom.register.util.TierTriplet;
 import net.minecraft.world.item.Tier;
@@ -31,10 +31,18 @@ public class MainToolRegister {
         for (int i = 0; i < TIERS.length; i++) {
             for (int j = 0; j < TIERS.length; j++) {
                 for (int k = 0; k < TIERS.length; k++) {
+                    // The second case below misses tier1-tier1-tier2 cases (this accounts for them)
+                    // If the first two are the same, just loop on the final one
+                    if(TIERS[i] == TIERS[j] && TIERS[i] != TIERS[k]){
+                        ALL_TIER_TRIPLETS.add(new TierTriplet(TIERS[i], TIERS[j], TIERS[k]));
+                    }
+
                     // If the tier isn't 3 of the same
                     if(TIERS[i] != TIERS[j] && TIERS[i] != TIERS[k]){
+
+                        //This is almost correct (its misses the tier1-tier1-tier2 cases)
                         // If another permutation of this tier doesn't already exist
-                        if(!(k <= i) && !(j <= i)){ //This is almost correct (its missing the 112 cases)
+                        if(!(k <= i) && !(j <= i)){
                             ALL_TIER_TRIPLETS.add(new TierTriplet(TIERS[i], TIERS[j], TIERS[k]));
                         }
                     }
