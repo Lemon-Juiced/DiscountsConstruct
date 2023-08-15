@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "discounts_construct:item/pickaxe_handle",
+    "layer1": "discounts_construct:item/diamond_pickaxe_1",
+    "layer2": "discounts_construct:item/gold_pickaxe_2",
+    "layer3": "discounts_construct:item/wood_pickaxe_3"
+  }
+}

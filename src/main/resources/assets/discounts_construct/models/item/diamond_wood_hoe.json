@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:item/handheld",
-  "textures": {
-    "layer0": "discounts_construct:item/hoe_handle",
-    "layer1": "discounts_construct:item/diamond_hoe_1",
-    "layer2": "discounts_construct:item/wood_hoe_2"
-  }
-}
