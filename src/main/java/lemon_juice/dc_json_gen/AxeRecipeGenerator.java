@@ -3,6 +3,7 @@ package lemon_juice.dc_json_gen;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 public class AxeRecipeGenerator {
     public static String[] TIERS = {"netherite", "diamond", "iron", "stone", "gold", "wood"};
@@ -13,39 +14,43 @@ public class AxeRecipeGenerator {
             for (int i = 0; i < TIERS.length; i++) {
                 for (int j = 0; j < TIERS.length; j++) {
                     for (int k = 0; k < TIERS.length; k++) {
-                        File file = new File(generateRecipeName(TIERS[i], TIERS[j], TIERS[k]));
+                        String tier1 = TIERS[i], tier2 = TIERS[j], tier3 = TIERS[k];
+                        File file = new File(generateRecipeName(tier1, tier2, tier3));
 
-                        if(!file.exists()) file.createNewFile();
+                        if (tier2 != tier3 && !(k <= j)) {
 
-                        PrintWriter writer = new PrintWriter(file);
+                            if (!file.exists()) file.createNewFile();
 
-                        writer.println("{");
-                        writer.println("    \"type\": \"minecraft:crafting_shaped\",");
-                        writer.println("    \"pattern\": [");
-                        writer.println("        \"ij\",");
-                        writer.println("        \"k/\",");
-                        writer.println("        \" /\"");
-                        writer.println("    ],");
-                        writer.println("    \"key\": {");
-                        writer.println("        \"i\": {");
-                        writer.println(getResourceLine(TIERS[i]));
-                        writer.println("        },");
-                        writer.println("        \"j\": {");
-                        writer.println(getResourceLine(TIERS[j]));
-                        writer.println("        },");
-                        writer.println("        \"k\": {");
-                        writer.println(getResourceLine(TIERS[k]));
-                        writer.println("        },");
-                        writer.println("        \"/\": {");
-                        writer.println("            \"item\": \"minecraft:stick\"");
-                        writer.println("        }");
-                        writer.println("    },");
-                        writer.println("    \"result\": {");
-                        writer.println("    \"item\": \"" + getOutputLine(TIERS[i], TIERS[j], TIERS[k]) + "\"");
-                        writer.println("    }");
-                        writer.println("}");
+                            PrintWriter writer = new PrintWriter(file);
 
-                        writer.close();
+                            writer.println("{");
+                            writer.println("    \"type\": \"minecraft:crafting_shaped\",");
+                            writer.println("    \"pattern\": [");
+                            writer.println("        \"ij\",");
+                            writer.println("        \"k/\",");
+                            writer.println("        \" /\"");
+                            writer.println("    ],");
+                            writer.println("    \"key\": {");
+                            writer.println("        \"i\": {");
+                            writer.println(getResourceLine(tier1));
+                            writer.println("        },");
+                            writer.println("        \"j\": {");
+                            writer.println(getResourceLine(tier2));
+                            writer.println("        },");
+                            writer.println("        \"k\": {");
+                            writer.println(getResourceLine(tier3));
+                            writer.println("        },");
+                            writer.println("        \"/\": {");
+                            writer.println("            \"item\": \"minecraft:stick\"");
+                            writer.println("        }");
+                            writer.println("    },");
+                            writer.println("    \"result\": {");
+                            writer.println("    \"item\": \"" + getOutputLine(tier1, tier2, tier3) + "\"");
+                            writer.println("    }");
+                            writer.println("}");
+
+                            writer.close();
+                        }
                     }
                 }
             }

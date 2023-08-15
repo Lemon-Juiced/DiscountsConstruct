@@ -12,37 +12,68 @@ public class HoeRecipeGenerator {
         try{
             for (int i = 0; i < TIERS.length; i++) {
                 for (int j = 0; j < TIERS.length; j++) {
-                        File file = new File(generateRecipeName(TIERS[i], TIERS[j]));
+                        File file1 = new File(generateRecipeName(TIERS[i], TIERS[j], 1));
+                        File file2 = new File(generateRecipeName(TIERS[i], TIERS[j], 2));
 
                         if(TIERS[i] != TIERS[j] && !(j <= i)){
-                            if(!file.exists()) file.createNewFile();
+                            if(!file1.exists()) file1.createNewFile();
 
-                            PrintWriter writer = new PrintWriter(file);
+                            PrintWriter writer1 = new PrintWriter(file1);
 
-                            writer.println("{");
-                            writer.println("    \"type\": \"minecraft:crafting_shaped\",");
-                            writer.println("    \"pattern\": [");
-                            writer.println("        \"ij\",");
-                            writer.println("        \" /\",");
-                            writer.println("        \" /\"");
-                            writer.println("    ],");
-                            writer.println("    \"key\": {");
-                            writer.println("        \"i\": {");
-                            writer.println(getResourceLine(TIERS[i]));
-                            writer.println("        },");
-                            writer.println("        \"j\": {");
-                            writer.println(getResourceLine(TIERS[j]));
-                            writer.println("        },");
-                            writer.println("        \"/\": {");
-                            writer.println("            \"item\": \"minecraft:stick\"");
-                            writer.println("        }");
-                            writer.println("    },");
-                            writer.println("    \"result\": {");
-                            writer.println("    \"item\": \"" + getOutputLine(TIERS[i], TIERS[j]) + "\"");
-                            writer.println("    }");
-                            writer.println("}");
+                            writer1.println("{");
+                            writer1.println("    \"type\": \"minecraft:crafting_shaped\",");
+                            writer1.println("    \"pattern\": [");
+                            writer1.println("        \"ij\",");
+                            writer1.println("        \" /\",");
+                            writer1.println("        \" /\"");
+                            writer1.println("    ],");
+                            writer1.println("    \"key\": {");
+                            writer1.println("        \"i\": {");
+                            writer1.println(getResourceLine(TIERS[i]));
+                            writer1.println("        },");
+                            writer1.println("        \"j\": {");
+                            writer1.println(getResourceLine(TIERS[j]));
+                            writer1.println("        },");
+                            writer1.println("        \"/\": {");
+                            writer1.println("            \"item\": \"minecraft:stick\"");
+                            writer1.println("        }");
+                            writer1.println("    },");
+                            writer1.println("    \"result\": {");
+                            writer1.println("    \"item\": \"" + getOutputLine(TIERS[i], TIERS[j]) + "\"");
+                            writer1.println("    }");
+                            writer1.println("}");
 
-                            writer.close();
+                            writer1.close();
+
+                            if(!file2.exists()) file2.createNewFile();
+
+                            PrintWriter writer2 = new PrintWriter(file2);
+
+                            writer2.println("{");
+                            writer2.println("    \"type\": \"minecraft:crafting_shaped\",");
+                            writer2.println("    \"pattern\": [");
+                            writer2.println("        \"ij\",");
+                            writer2.println("        \" /\",");
+                            writer2.println("        \" /\"");
+                            writer2.println("    ],");
+                            writer2.println("    \"key\": {");
+                            writer2.println("        \"i\": {");
+                            writer2.println(getResourceLine(TIERS[j]));
+                            writer2.println("        },");
+                            writer2.println("        \"j\": {");
+                            writer2.println(getResourceLine(TIERS[i]));
+                            writer2.println("        },");
+                            writer2.println("        \"/\": {");
+                            writer2.println("            \"item\": \"minecraft:stick\"");
+                            writer2.println("        }");
+                            writer2.println("    },");
+                            writer2.println("    \"result\": {");
+                            writer2.println("    \"item\": \"" + getOutputLine(TIERS[i], TIERS[j]) + "\"");
+                            writer2.println("    }");
+                            writer2.println("}");
+
+                            writer2.close();
+
                         }
 
                     }
@@ -59,13 +90,13 @@ public class HoeRecipeGenerator {
      * @param tier2 The second tier
      * @return The recipe name
      */
-    public static String generateRecipeName(String tier1, String tier2){
+    public static String generateRecipeName(String tier1, String tier2, int count){
         String recipeName = "";
 
         recipeName += tier1 + "_";
         recipeName += tier2;
 
-        recipeName += "_hoe.json";
+        recipeName += "_hoe_" + count + ".json";
         return recipeName;
     }
 
