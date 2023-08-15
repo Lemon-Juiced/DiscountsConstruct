@@ -26,8 +26,8 @@ public class DiscountsConstruct {
         // Register Items
         ModItems.register(modEventBus);
 
-        // Activate the UtilityLogger
-        UtilityLogger.outputItems();
+        // Activate the UtilityLogger (No Longer Really Needed)
+        // UtilityLogger.outputItems();
 
         // Register Creative Tab
         ModCreativeTabs.register(modEventBus);
