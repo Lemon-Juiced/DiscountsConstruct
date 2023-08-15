@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "discounts_construct:item/sword_handle",
+    "layer1": "discounts_construct:item/diamond_sword_1",
+    "layer2": "discounts_construct:item/iron_sword_2"
+  }
+}

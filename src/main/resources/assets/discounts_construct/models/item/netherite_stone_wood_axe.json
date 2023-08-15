@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "discounts_construct:item/axe_handle",
+    "layer1": "discounts_construct:item/netherite_axe_1",
+    "layer2": "discounts_construct:item/stone_axe_2",
+    "layer3": "discounts_construct:item/wood_axe_3"
+  }
+}
