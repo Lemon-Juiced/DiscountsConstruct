@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ij",
+        "k/",
+        " /"
+    ],
+    "key": {
+        "i": {
+          "tag": "minecraft:stone_tool_materials"
+        },
+        "j": {
+          "tag": "minecraft:planks"
+        },
+        "k": {
+          "tag": "minecraft:stone_tool_materials"
+        },
+        "/": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+    "item": "discounts_construct:stone_wood_stone_axe"
+    }
+}

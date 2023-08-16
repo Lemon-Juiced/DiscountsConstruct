@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ij",
+        "k/",
+        " /"
+    ],
+    "key": {
+        "i": {
+         "item": "minecraft:iron_ingot"
+        },
+        "j": {
+         "item": "minecraft:netherite_ingot"
+        },
+        "k": {
+         "item": "minecraft:gold_ingot"
+        },
+        "/": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+    "item": "discounts_construct:gold_iron_netherite_axe"
+    }
+}

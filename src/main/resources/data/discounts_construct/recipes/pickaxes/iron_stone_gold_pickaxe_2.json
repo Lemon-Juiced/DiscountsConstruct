@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ijk",
+        " / ",
+        " / "
+    ],
+    "key": {
+        "i": {
+         "item": "minecraft:iron_ingot"
+        },
+        "j": {
+         "item": "minecraft:gold_ingot"
+        },
+        "k": {
+          "tag": "minecraft:stone_tool_materials"
+        },
+        "/": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+    "item": "discounts_construct:iron_stone_gold_pickaxe"
+    }
+}

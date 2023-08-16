@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ij",
+        "k/",
+        " /"
+    ],
+    "key": {
+        "i": {
+          "tag": "minecraft:stone_tool_materials"
+        },
+        "j": {
+         "item": "minecraft:gold_ingot"
+        },
+        "k": {
+         "item": "minecraft:netherite_ingot"
+        },
+        "/": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+    "item": "discounts_construct:gold_netherite_stone_axe"
+    }
+}

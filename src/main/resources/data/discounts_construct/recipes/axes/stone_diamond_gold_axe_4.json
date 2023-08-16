@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ij",
+        "k/",
+        " /"
+    ],
+    "key": {
+        "i": {
+         "item": "minecraft:diamond"
+        },
+        "j": {
+         "item": "minecraft:gold_ingot"
+        },
+        "k": {
+          "tag": "minecraft:stone_tool_materials"
+        },
+        "/": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+    "item": "discounts_construct:stone_diamond_gold_axe"
+    }
+}

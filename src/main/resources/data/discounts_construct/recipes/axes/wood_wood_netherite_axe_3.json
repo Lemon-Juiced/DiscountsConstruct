@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ij",
+        "k/",
+        " /"
+    ],
+    "key": {
+        "i": {
+          "tag": "minecraft:planks"
+        },
+        "j": {
+          "tag": "minecraft:planks"
+        },
+        "k": {
+         "item": "minecraft:netherite_ingot"
+        },
+        "/": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+    "item": "discounts_construct:wood_wood_netherite_axe"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ijk",
+        " / ",
+        " / "
+    ],
+    "key": {
+        "i": {
+         "item": "minecraft:iron_ingot"
+        },
+        "j": {
+          "tag": "minecraft:planks"
+        },
+        "k": {
+         "item": "minecraft:netherite_ingot"
+        },
+        "/": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+    "item": "discounts_construct:iron_netherite_wood_pickaxe"
+    }
+}

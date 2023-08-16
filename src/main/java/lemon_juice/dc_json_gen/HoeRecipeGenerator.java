@@ -88,10 +88,11 @@ public class HoeRecipeGenerator {
      *
      * @param tier1 The first tier
      * @param tier2 The second tier
+     * @param count The number of the file
      * @return The recipe name
      */
     public static String generateRecipeName(String tier1, String tier2, int count){
-        String recipeName = "";
+        String recipeName = "src/main/resources/data/discounts_construct/recipes/hoes/";
 
         recipeName += tier1 + "_";
         recipeName += tier2;

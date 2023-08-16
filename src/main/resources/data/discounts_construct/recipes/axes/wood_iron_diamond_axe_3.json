@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ij",
+        "k/",
+        " /"
+    ],
+    "key": {
+        "i": {
+         "item": "minecraft:iron_ingot"
+        },
+        "j": {
+          "tag": "minecraft:planks"
+        },
+        "k": {
+         "item": "minecraft:diamond"
+        },
+        "/": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+    "item": "discounts_construct:wood_iron_diamond_axe"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ijk",
+        " / ",
+        " / "
+    ],
+    "key": {
+        "i": {
+         "item": "minecraft:netherite_ingot"
+        },
+        "j": {
+         "item": "minecraft:iron_ingot"
+        },
+        "k": {
+         "item": "minecraft:diamond"
+        },
+        "/": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+    "item": "discounts_construct:iron_netherite_diamond_pickaxe"
+    }
+}

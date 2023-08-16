@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ijk",
+        " / ",
+        " / "
+    ],
+    "key": {
+        "i": {
+          "tag": "minecraft:planks"
+        },
+        "j": {
+          "tag": "minecraft:planks"
+        },
+        "k": {
+         "item": "minecraft:diamond"
+        },
+        "/": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+    "item": "discounts_construct:wood_wood_diamond_pickaxe"
+    }
+}
