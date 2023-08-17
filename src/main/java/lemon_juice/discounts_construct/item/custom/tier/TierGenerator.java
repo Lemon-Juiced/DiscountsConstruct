@@ -51,6 +51,35 @@ public class TierGenerator {
         return generatedTier;
     }
 
+    /**
+     * Creates a tier for specifically axes
+     *
+     * @param tier1 The first tier to use as a reference
+     * @param tier2 The second tier to use as a reference
+     * @param tier3 The third tier to use as a reference
+     * @return The tier for a specific item
+     */
+    public static Tier generateAxeTier(Tier tier1, Tier tier2, Tier tier3){
+        int level = Math.max(Math.max(tier1.getLevel(), tier2.getLevel()), tier3.getLevel());
+        int uses = (tier1.getUses()/3) + (tier2.getUses()/3) + (tier3.getUses()/3);
+        float speed = Math.max(Math.max(tier1.getSpeed(), tier2.getSpeed()), tier3.getSpeed());
+
+        int tier1DamageModifier = 0;
+        int tier2DamageModifier = 0;
+        int tier3DamageModifier = 0;
+        if(tier1 == Tiers.NETHERITE || tier1 == Tiers.DIAMOND) tier1DamageModifier--;
+        if(tier2 == Tiers.NETHERITE || tier2 == Tiers.DIAMOND) tier2DamageModifier--;
+        if(tier3 == Tiers.NETHERITE || tier3 == Tiers.DIAMOND) tier3DamageModifier--;
+
+        float damage = Math.max(Math.max(tier1.getAttackDamageBonus() + tier1DamageModifier, tier2.getAttackDamageBonus() + tier2DamageModifier), tier3.getAttackDamageBonus() + tier3DamageModifier);
+        int enchantmentValue = Math.max(Math.max(tier1.getEnchantmentValue(), tier2.getEnchantmentValue()), tier3.getEnchantmentValue());
+
+        Tier generatedTier = new ForgeTier(level, uses, speed, damage, enchantmentValue, getBlockTag(tier1, tier2, tier3),
+                () -> getRepairIngredientItem(tier1, tier2, tier3));
+
+        return generatedTier;
+    }
+
     public static TagKey<Block> getBlockTag(Tier tier1, Tier tier2){
         // Determine what the tiers are
         // Uses durability as it is different for all tiers
